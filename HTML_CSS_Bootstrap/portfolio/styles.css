@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.navbar1{
+display: flex;
+}
+.navItem{
+    margin: 5px 15px;
+}
+
+
+.navLink:link{
+    color: yellow;
+    font-size: xx-large;
+    text-decoration: none;
+}
+.navLink:hover{
+    color:white;
+    text-decoration: underline;
+}
+.navLink:active{
+    color: pink;
+}
+.navLink:visited{
+    color: yellow;
+    background-color: gray;
+}
+
+.navbar2{
+    color: yellow;
+    font-size: x-large;
+    padding: 5px 15px;
+    margin-right: 20px;
+
+}
+
+.navbar2 i{
+    padding: 3px;
+
+}
+.navbar2 i:hover{
+    color:black ;
+    background-color: yellow;
+    border-radius: 3px;
+}
+.perInfo{
+width: 80%;
+margin: 20px auto;
+display: flex;
+}
+.detailsInfo{
+    
+    flex:1;
+    padding: 40px 20px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.detailsInfo h1{
+    margin-bottom: 20px;
+}
+button{
+    background-color: green;
+    color: white;
+    padding: 10px 30px ;
+    font-size: x-large;
+    border: none;
+    border-radius: 0 10px 0 10px;
+}
+.imgInfo{
+    flex:1;
+    padding-left: 50px;
+}
+
+.imgInfo img{
+    width: 250px;
+    height: 250px;
+    border-radius: 40%;
+}
+.companyWork{
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
