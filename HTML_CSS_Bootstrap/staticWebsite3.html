@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .grad1{
+            /* background-image: linear-gradient(to right, red,green,blue); */
+            /* background-image: radial-gradient(circle,red,black,yellow); */
+            background-image: conic-gradient(from 90deg, blue, black,orange);
+        }
+        .sizeDiv{
+            width: 100px;
+            height: 100px;
+        }
+        .transDiv{
+            background-color: red;
+            color: green;
+            transition: background-color 5s, color 5s, transform 5s;
+        }
+        .transDiv:hover{
+            /* transform: scale(2,2); */
+            transform: rotate(-60deg);
+            /* transform: skewX(40deg); */
+            /* transform: translate(100px,100px); */
+            background-color: black;
+            color: white;
+        }
+        .aniDiv{
+            width: 50px;
+            height: 25px;
+            text-align: center;
+            padding-top: 7px;
+            background-color: greenyellow;
+            color: white;
+            border-radius: 5px;
+            /* animation-name: aniOne;
+            animation-duration: 5s;
+            animation-delay: 3s; */
+            animation: aniOne 5s 3s infinite;
+        }
+
+
+        @keyframes aniOne{
+            /* from{background-color: red;}
+            to{background-color: blue;} */
+
+            0%{background-color: greenyellow}
+            10%{transform: rotate(30deg);}
+            30%{transform: translateX(200px);}
+            50%{background-color: red;}
+            60%{transform: rotate(-120deg);}
+            70%{transform: rotate(60deg);}
+            85%{transform: skewX(20deg);}
+            100%{background-color: rgb(0, 238, 255);}
+        }
+        .mainDiv{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .redDiv{
+            background-color: red;
+            height: 30px;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+        .blueDiv{
+            background-color: blue;
+            height: 100%;
+            width: 100px;
+            position: absolute;
+            right: 0;
+            top:0
+
+        }
+        .yellow{
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top:200px;
+            left: 200px;
+        }
+        .gray{
+            background-color: gray;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+        z-index: -1;
+        }
+        .iconWatsApp{
+            background-color: rgb(11, 235, 11);
+            color: white;
+            font-size: 90px;
+            text-align: center;
+            padding-top: 9px;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grad1" style="width:100px;height: 100px;"></div>
+    <div class="sizeDiv transDiv">Animation</div>
+
+<div class="aniDiv">CSS</div>
+
+
+<div class="mainDiv">
+    <div class="redDiv">Red Div</div>
+    <div class="blueDiv"></div>
+    <div class="yellow"></div>
+    <div class="gray"></div>
+</div>
+
+
+
+
+<div class="sizeDiv iconWatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</div>
+</body>
+</html>
