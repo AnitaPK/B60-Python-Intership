@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 700px;
+            height: 500px;
+            background-color: aqua;
+            display: grid;
+            /* grid-template-columns: 'fr' 'fr'; 
+            grid-template-rows: ; */
+            grid-template-areas: 'na na na na'
+                'he he he he'
+                'ab main main main'
+                'ab adv adv adv'
+                'foo foo foo foo';
+
+        }
+
+        /* .item{
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+        } */
+        .Navbar {
+            grid-area: na;
+            background-color: white;
+        }
+
+        .Header {
+            grid-area: he;
+            background-color: bisque;
+        }
+
+        .aside {
+            grid-area: ab;
+            background-color: chocolate;
+        }
+
+        .Main {
+            grid-area: main;
+            background-color: cadetblue;
+        }
+
+        .section {
+            grid-area: adv;
+            background-color: cornflowerblue;
+        }
+
+        .Footer {
+            grid-area: foo;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Navbar">Navbar</div>
+        <div class="Header">Header</div>
+        <div class="aside">aside sidebar</div>
+        <div class="Main">Main content</div>
+        <div class="section">section</div>
+        <div class="Footer">Footer</div>
+    </div>
+</body>
+
+</html>

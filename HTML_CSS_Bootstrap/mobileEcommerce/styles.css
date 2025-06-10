@@ -1,0 +1,17 @@
+.customIcon{
+    font-size: large;
+}
+
+.customCorouselImage{
+    width: 100%;
+    height: 550px;
+}
+
+.logoIcon{
+    width: 200px;
+    height: 200px;
+}
+
+/* .logoIcon:hover{
+    box-shadow: 2px 2px 2px gray;
+} */
