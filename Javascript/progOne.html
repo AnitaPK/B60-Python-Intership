@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        const user = {name:'Virat',sName: 'Kohli',age: 37};
+        localStorage.setItem('uname', JSON.stringify(user))
+
+        u1 =JSON.parse(localStorage.getItem('uname'))
+        console.log(u1.name)
+    </script>
+
+
+    
+<input type="text" id="nameInput">
+<button onclick="getNameFromInput()">GetName</button>
+
+<h1 id="greetWithName" class=""></h1>
+
+<h2 id="showDate"></h2>
+<ul id="table18"></ul>
+
+<script>
+    const ulEmlt = document.querySelector('#table18')
+    for(i=1;i<=10;i++){
+        liElment = document.createElement('li')
+        licontent = document.createTextNode(18*i)
+        liElment.appendChild(licontent);
+        console.log(liElment);
+        ulEmlt.appendChild(liElment);
+    }
+</script>
+
+<ul>
+    <!-- <li>Item1</li> -->
+</ul>
+<pre>
+String 
+Number
+Boolean
+undefined
+null 
+object   array, object, function  
+bigint 
+symbol 
+
+
+
+var       let           const
+
+let x = 8
+ x = 'wisdom'
+
+
+</pre>
+
+    <script>
+    //   num1 =  prompt("Enter number")
+    // console.log(num1);
+    alert("hello from alert")
+    </script>
+    <script src="./progOne.js"></script>
+</body>
+</html>
