@@ -10,11 +10,11 @@ const products = [
 const ROW_PRODUCT = document.getElementById('rowProducts')
 
 const cartArray = []
- localStorage.setItem('cartArray',JSON.stringify(cartArray))
+//  localStorage.setItem('cartArray',JSON.stringify(cartArray))
 
 function gotoCartPage(event){
      event.preventDefault();
-    window.location.href = './cart.html'
+    location.href = './cart.html'
 }
 
 function AddToCart(id){
@@ -26,6 +26,8 @@ function AddToCart(id){
     localStorage.setItem('cartArray',JSON.stringify(cartArray1))
     console.log(cartArray1);
 }
+
+function fetchProducts(){
 
 ROW_PRODUCT.innerHTML = products.map((elmt, index) => 
     `
@@ -43,32 +45,39 @@ ROW_PRODUCT.innerHTML = products.map((elmt, index) =>
 </div>
     
     `).join('')
+}
 
+if(ROW_PRODUCT){
+ fetchProducts();   
+}
 
+totalprice = 0
 
 function fetchCart(){
 const cartProd = document.getElementById('cartProd')
 
 const cartFromBrowser = JSON.parse(localStorage.getItem('cartArray'))
 
-totalprice = 0
-for(i=0;i<=cartFromBrowser.legth;i++){
-    totalprice = totalprice +cartFromBrowser[i].price
+for(i=0;i<cartFromBrowser.length;i++){
+    totalprice = totalprice + cartFromBrowser[i].price
+    console.log(totalprice);
 }
 
 
 cartProd.innerHTML = cartFromBrowser.map((elemt, i)=>`
                                     <div>
-                                        <div>${elemt.name}</div>
-                                        <div>${elemt.price}</div>
+                                        <div>${elemt.name}
+                                        <span class="pl-5">${elemt.price}</span>
+                                        </div>
                                     </div>
-`)
+`).join('');
 
 
 document.getElementById('tPrice').innerHTML = totalprice;
 }
-
+if (document.getElementById('cartProd')) {
 fetchCart();
+}
 // CRUD 
 
 // create Read Update Delete 

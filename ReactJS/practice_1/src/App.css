@@ -1,0 +1,24 @@
+.headingOne{
+  color: red;
+  text-align: center;
+}
+.headerImage{
+  width:50%;
+  display: block;
+  margin: 20px auto;
+}
+
+.custom_btn{
+  width: 20%;
+  display: block;
+  margin: 20px auto;
+  background-color: chocolate;
+  color: white;
+  padding: 10px 20px ;
+  border: none;
+  border-radius: 5px;
+}
+.custom_btn:hover{
+  background-color: brown;
+  border-radius: 15px;
+}
