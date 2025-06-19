@@ -10,6 +10,7 @@ import Navbar from './components/Navabar';
 import Order from './components/Order';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import LoginPage from './components/LoginPage';
 
 
 function App(){
@@ -17,6 +18,7 @@ function App(){
     <BrowserRouter>
       <Navbar />
       <Routes>
+          <Route path="/login" element={<LoginPage />}></Route>
           <Route path='/' element={<Home />}></Route>
           <Route path='/hello' element={<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, consequatur.</p>} ></Route>
           <Route path="/ingredient" element={<Ingredients />}></Route>

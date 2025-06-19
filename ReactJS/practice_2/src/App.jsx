@@ -3,6 +3,7 @@ import './App.css'
 import Button from './components/Button'
 import Greet from './components/Greet'
 import Counter from './components/Counter'
+import TaskManagement from './components/TaskManagement'
 
 
 
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+    <TaskManagement />
     <Counter />
     <br></br>
     <hr></hr>
